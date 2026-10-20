@@ -2,9 +2,16 @@
 
 ## ==> indiquer la date du TD
 
-### Ce que j'ai fait chez moi
+### Ce que j'ai fait chez moi, mes erreurs
 
-Où suis-je
+J'ai refait des exercices du TD seule 20/10/2026 : 21.06
+
+Mes erreurs : 
+
+Pour copier => copie quelque chose (ne pas oublier l'adresse entière) vers une destination => adresse et sous un nom
+J'avais cré mon dossier PLURITAL et j'y etais donc ne pas remettre PLURITAL en destination (puisque la copie se faire à l'intérieur)
+
+cp ~/PPE1-2627/template-journal.md ~/PLURITAL/IntimDoss/journal.md
 
 ls ./Documents depuis Documents
 PLURITAL/... depuis PLURITAL
@@ -32,6 +39,7 @@ Réflexe : Tab écrit le nom exact
 mv et cp
 
 mv qui renomme au lieu de ranger, quand la destination n’existe pas
+
 > utilisé avec cp
 Réflexe : la destination doit être un dossier qui existe, et cp n’a pas besoin de flèche
 
