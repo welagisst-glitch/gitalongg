@@ -1,0 +1,2 @@
+cat 2016*ann | wc -l >> ./../../gitalongg/Exercices/comptes.txt
+echo Annotations en 2016  >> ./../../gitalongg/Exercices/comptes.txt
