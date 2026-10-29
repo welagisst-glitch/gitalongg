@@ -114,4 +114,5 @@ bla bla bla
 ## Exercices git
 
 J'ai commencé l'exercice 2 de la fiche Git II.
+Cette ligne doit rester après correction.
 
