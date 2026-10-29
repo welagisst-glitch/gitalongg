@@ -105,4 +105,8 @@ bla bla bla
 
 ### Questions à discuter
 
-bla bla bla
+# Séance 3
+
+## Exercices git
+
+J'ai commencé l'exercice 2 de la fiche Git II.
