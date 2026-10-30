@@ -1,6 +1,7 @@
 # PPE1
 
-## ==> indiquer la date du TD
+## ==> indiquer la date du TD 
+J'AVAIS OUVLIÉ DE BIEN CONFIGURÉ MON JOURNAL DONC RIEN NE S'ENVOYAIT SUR LE GITHUB
 
 ### Ce que j'ai fait chez moi, mes erreurs
 
