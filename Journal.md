@@ -112,3 +112,11 @@ bla bla bla
 J'ai commencé l'exercice 2 de la fiche Git II.
 Cette ligne doit rester après correction.
 
+oups
+oups 
+oups
+oups
+oups
+oups
+oups
+
