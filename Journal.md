@@ -174,3 +174,9 @@ oups
 
 Exercice Git.
 Mettre de côté
+
+### Exercice 3.b : différence entre les deux méthodes
+
+- Exercice 2 (erreur déjà envoyée) : j'ai utilisé `git revert`. Il ajoute une nouvelle sauvegarde qui annule l'erreur, et l'erreur reste dans l'historique. C'est sans danger après un envoi.
+- Exercice 3 (erreur pas envoyée) : j'ai utilisé `git reset` sans `--hard`. Il recule l'historique, mon texte reste dans les fichiers, et les sauvegardes « oups » disparaissent. Je ne peux le faire que parce que rien n'est envoyé.
+- Règle retenue : après l'envoi, j'ajoute (`revert`). Avant l'envoi, je peux reculer (`reset`).
