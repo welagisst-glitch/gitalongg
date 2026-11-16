@@ -180,3 +180,63 @@ Mettre de côté
 - Exercice 2 (erreur déjà envoyée) : j'ai utilisé `git revert`. Il ajoute une nouvelle sauvegarde qui annule l'erreur, et l'erreur reste dans l'historique. C'est sans danger après un envoi.
 - Exercice 3 (erreur pas envoyée) : j'ai utilisé `git reset` sans `--hard`. Il recule l'historique, mon texte reste dans les fichiers, et les sauvegardes « oups » disparaissent. Je ne peux le faire que parce que rien n'est envoyé.
 - Règle retenue : après l'envoi, j'ajoute (`revert`). Avant l'envoi, je peux reculer (`reset`).
+
+## Séance du 16 novembre : finir Git II et les pipelines
+
+### Pipelines, exercice 2 (classements)
+
+- **Erreur 1 : chercher les lieux avec `ls`**
+  - Résultat : j'ai compté des noms de fichiers d'images (Kyoto, Berlin…).
+  - Compris : `ls` donne des noms de fichiers. Les lieux sont dans le contenu des fichiers `.ann` : c'est `cat` qui les lit.
+
+- **Erreur 2 : une espace dans l'adresse après `>`**
+  - Résultat : « est un dossier ».
+  - Compris : le terminal coupe aux espaces. Après la flèche, un seul mot : dossier, barre oblique, nom du fichier, collés.
+
+- **Erreur 3 : `cut-f` sans espace**
+  - Résultat : « commande introuvable ».
+  - Compris : il faut `cut -f 3`, comme `wc -l`.
+
+- **Erreur 4 : le motif lancé depuis le mauvais dossier**
+  - Résultat : « No such file or directory », et le fichier de sortie a été vidé.
+  - Compris : le terminal prépare le fichier de la flèche avant de lancer la commande. Je vérifie avec `pwd`.
+
+- **Erreur 5 : `grep | Location`**
+  - Résultat : « Usage : grep… ».
+  - Compris : le mot à chercher va après `grep`, sans tube. Un tube envoie vers une commande, et `Location` n'en est pas une.
+
+- **Erreur 6 : classement écrit dans `Exercice1`**
+  - Résultat : le fichier n'était pas dans mon dépôt Git.
+  - Compris : sans adresse, la flèche écrit dans le dossier où je suis. Je mets l'adresse de `~/gitalongg/Exercices`.
+
+### Git II
+
+- **Erreur 7 : `git log` lancé dans `~`**
+  - Résultat : « n'est pas un dépôt git ».
+  - Compris : Git ne marche que dans un dossier suivi. Je regarde l'invite avant chaque commande `git`.
+
+- **Erreur 8 : `pop` tout seul**
+  - Résultat : « commande introuvable ».
+  - Compris : `pop` est le dernier mot de `git stash pop`.
+
+- **Erreur 9 : « Conversation » au lieu de « Conservation »**
+  - Résultat : le message du tiroir était faux, sans conséquence.
+  - Compris : je relis mes messages avant d'appuyer sur Entrée.
+
+- **Erreur 10 : l'historique a divergé**
+  - Résultat : « 1 et 1 commits différents ».
+  - Compris : j'avais une sauvegarde chez moi (`comptes.sh`), et GitHub avait ma modification en ligne. Il faut les fusionner avec `git merge origin/main`.
+
+- **Erreur 11 : conflit au `git stash pop`**
+  - Résultat : « CONFLIT » dans `Journal.md`.
+  - Compris : deux modifications au même endroit. Je garde les deux lignes, je supprime les repères, `git add`, puis `git stash drop`.
+
+- **Erreur 12 : `pipelines.txt` gardait d'anciennes lignes**
+  - Résultat : 27 lignes au lieu de 23.
+  - Compris : je relis le fichier avec `cat -n` avant de sauvegarder.
+
+### Ce que j'ai retenu
+
+- Avant d'envoyer : `git status`, `git log --oneline --graph --all` et `git ls-remote --tags origin`.
+- Mettre de côté, récupérer, remettre. Fusionner quand les histoires divergent.
+- Un `git push` seul n'envoie pas les étiquettes.
