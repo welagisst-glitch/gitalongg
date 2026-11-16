@@ -102,6 +102,51 @@ TD
 - Avant une commande qui modifie quelque chose : `pwd`, puis `ls`, puis je vérifie les espaces.
 - La touche Tab écrit le nom exact et évite les fautes.
 
+
+## Séance du 3 novembre : pipelines, exercice 2 (classements) JE N'AVAIS PAS REUSSI LA PREMIERE FOIS DONC J'AI REFAIT. LE TD 3 NECESSITE CERTAINES COMMANDES DE CET EXERCICE
+
+- **Erreur 1 : chercher les lieux avec `ls`**
+  - Résultat : j'ai compté les fichiers qui contiennent « Kyoto » dans leur nom (les images de l'archive).
+  - Compris : `ls` donne des **noms** de fichiers. Les lieux des annotations sont **dans** les fichiers `.ann` : c'est `cat` qui lit leur contenu.
+
+- **Erreur 2 : une espace dans l'adresse après `>`**
+  - Résultat : « est un dossier ».
+  - Compris : le terminal coupe aux espaces. Après la flèche, un seul mot : dossier, barre oblique, nom du fichier, **collés**.
+
+- **Erreur 3 : un `*` oublié à la fin de la commande**
+  - Résultat : `tail` a essayé de lire tous les éléments du dossier : « Est un répertoire ».
+  - Compris : le joker `*` seul désigne tout ce qu'il y a dans le dossier où je suis.
+
+- **Erreur 4 : le motif lancé depuis le mauvais dossier**
+  - Résultat : « No such file or directory », et le fichier de sortie a été **vidé**.
+  - Compris : le terminal prépare le fichier de la flèche **avant** de lancer la commande. `pwd` avant de lancer, et le même millésime dans le motif et dans le nom du fichier.
+
+- **Erreur 5 : `cat` sans nom de fichier, avec une flèche**
+  - Résultat : il attendait mon clavier, et un classement a été vidé.
+  - Compris : Ctrl+C l'interrompt, mais la flèche avait déjà vidé le fichier.
+
+- **Erreur 6 : `cut-f` sans espace**
+  - Résultat : « commande introuvable ».
+  - Compris : il faut `cut -f 3`, avec une espace, comme `wc -l`.
+
+- **Erreur 7 : `grep | Location`**
+  - Résultat : « Usage : grep… », puis « La commande Location n'a pas été trouvée ».
+  - Compris : le mot à chercher se met **après** `grep`, sans tube. Un tube envoie vers une commande, et `Location` n'en est pas une.
+
+- **Erreur 8 : deux noms pour le même fichier** (`classement-mars` et `classement_mars`)
+  - Résultat : deux fichiers, dont un vide.
+  - Compris : choisir un nom et le garder. Un fichier créé par erreur se supprime avec `rm -i`.
+
+- **Erreur 9 : le classement écrit dans `Exercice1`**
+  - Résultat : le fichier était dans mes données, pas dans mon dépôt Git.
+  - Compris : sans adresse, la flèche écrit dans le dossier où je suis. Pour le rendu, il faut l'adresse de `~/gitalongg/Exercices`.
+
+### Ce que j'ai retenu
+
+- Pour classer : `cut -f 3` garde le nom, `sort` met les identiques côte à côte, `uniq -c` les compte, `sort -n` trie par nombre, `tail -n 15` garde les plus cités.
+- `uniq` ne regroupe que des lignes **voisines** : trier avant.
+- Un seul chevron vide le fichier, même quand la commande échoue.
+- `wc -l` sur le fichier de sortie : 15 lignes.
 #### Après le cours
 
 bla bla bla
@@ -128,3 +173,4 @@ oups
 oups
 
 Exercice Git.
+Mettre de côté
