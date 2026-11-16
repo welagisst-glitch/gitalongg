@@ -1,7 +1,7 @@
 # PPE1
 
 ## ==> indiquer la date du TD 
-J'AVAIS OUVLIÉ DE BIEN CONFIGURÉ MON JOURNAL DONC RIEN NE S'ENVOYAIT SUR LE GITHUB
+J'AVAIS OUBLIÉ DE BIEN CONFIGURER MON JOURNAL DONC RIEN NE S'ENVOYAIT SUR LE GITHUB
 
 ### Ce que j'ai fait chez moi, mes erreurs
 
@@ -50,9 +50,15 @@ cat tout seul
 cat Images pour lister
 wc -l noms pour compter des noms
 Réflexe : ls pour les noms, cat nom pour lire
+
+
 #### TD 2 : JE ME SUIS RENDUE COMPTE QUE JE N'AVAIS PAS BIEN CONFIGURER LE JOURNAL - GITHUB
 
-## Séance du 27 octobre : erreurs et solutions
+
+
+
+
+TD
 
 ### Exercice 1 (comptages)
 
@@ -121,3 +127,4 @@ oups
 oups
 oups
 
+Exercice Git.
